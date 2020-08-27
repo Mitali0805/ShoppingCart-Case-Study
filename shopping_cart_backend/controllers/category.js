@@ -24,7 +24,7 @@ exports.create = (req,res) =>{
     category.save((err,data)=>{
         if(err){
         return res.status(400).json({
-            err
+            error:err
         });
      } 
 
@@ -56,7 +56,7 @@ exports.update = (req,res) =>{
     category.save((err,data) =>{
         if(err){
             return res.status(400).json({
-               error:"error occured while creating category" 
+               error:"error occured while creating categoryer" 
             });
         }
         res.json(data);
